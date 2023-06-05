@@ -1,0 +1,6 @@
+SELECT u.id, u.username, AVG(r.rating) AS Average_rating
+FROM Users u
+JOIN Ratings r ON u.id = r.id
+GROUP BY u.id, u.username
+ORDER BY Average_rating DESC
+LIMIT 5;

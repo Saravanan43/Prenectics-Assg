@@ -52,3 +52,5 @@ void fn(int arr[],int l, int h) {
    return ;
 
 }
+
+//  TC -> O(nlogn) SC -> O(n) as I'm using vector in merge function
