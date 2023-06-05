@@ -14,15 +14,6 @@ function App() {
         restarauntArray.push({
           id: restarauntData.data.id,
           name: restarauntData.data.name,
-          address: restarauntData.data.address,
-          rating: restarauntData.data.avgRating,
-          costForTwo: restarauntData.data.costForTwo,
-          deliveryTime: restarauntData.data.deliveryTime,
-          distanceAway: restarauntData.data.lastMileTravelString,
-          cuisines: restarauntData.data.cuisines,
-          area: restarauntData.data.area,
-          locality: restarauntData.data.locality,
-          cloudinaryImageId: restarauntData.data.cloudinaryImageId,
         });
       });
       initialRestarauntList.current = restarauntArray;
@@ -63,7 +54,7 @@ function App() {
           placeholder="Search for restaraunts"
           onChange={filterRestaraunt}
         />
-        {restarauntList.length > 0
+        {restarauntList && restarauntList.length > 0
           ? restarauntList.map((items) => {
               return <p>{items.name}</p>;
             })
